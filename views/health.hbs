@@ -1,0 +1,25 @@
+<div class="posts">
+    <div class="row justify-content-center">
+        <div class="col-md-9" style="margin-top: 10px;">
+            <div class="card">
+                <div class="card-body">
+                	<div class="card-header">
+                        Health Data of cluster : {{this.cluster_name}}
+				  	</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Status : {{this.status}}</h5>
+                        <p class="card-text">timed_out : {{this.timed_out}}</p>
+                        <p class="card-text">Number of Nodes : {{this.number_of_nodes}}</p>
+                        <p class="card-text">active_primary_shards: {{this.active_primary_shards}}</p>
+                        <p class="card-text">active_shards: {{this.active_shards}}</p>
+                        <p class="card-text">relocating_shards: {{this.relocating_shards}}</p>
+                        <p class="card-text">initializing_shards: {{this.initializing_shards}}</p>
+                        <p class="card-text">unassigned_shards: {{this.unassigned_shards}}</p>
+                        
+                        this.active_primary_shards
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

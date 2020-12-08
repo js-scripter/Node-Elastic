@@ -1,0 +1,37 @@
+
+<form class="clearfix mb-4" action="/search-title">
+	<div class="form-group">
+	  <label for="search-title">Search for Titles</label>
+	  <input type="text" class="form-control" id="title" name="title" aria-describedby="search-title" placeholder="ex. Elasticsearch on NodeJS">
+	  <button id="submitSearchTitle" class="btn btn-primary float-right">Submit</button>
+	</div>
+</form>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    {{#if this.hits.hits}}   
+                        {{#each this.hits.hits}}  
+                        	<div class="card-header">
+						    	ID : {{_id}}
+						  	</div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{_source.Title}}</h5>
+                                <p class="card-text">Categories : {{_source.Categories}}</p>
+                                <p class="card-text">Tags : {{_source.Tags}}</p>
+                                <p class="card-text">Status: {{_source.Status}}</p>
+                            </div>                   
+                            <br><br>
+                        {{/each}}                       
+                    {{else}}
+                        <tr>
+                            <td>No search results yet!</td>
+                        </tr>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

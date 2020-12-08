@@ -1,0 +1,29 @@
+{
+	"took":489,
+	"timed_out":false,
+	"_shards":{
+		"total":1,"successful":1,"skipped":0,"failed":0
+	},
+	"hits":{
+		"total":{
+			"value":1,"relation":"eq"
+		},
+		"max_score":0.81427324,
+		"hits":[
+			{
+				"_index":"search-articles",
+				"_type":"articles",
+				"_id":"216",
+				"_score":0.81427324,
+				"_source":{
+					"Title":"How to Make a Simple App Using Elasticsearch, NodeJS, Bootstrap, and Express",
+					"Meta Description":"A demo of how to make a simple app using Elasticsearch with NodeJS and Express.",
+					"Meta Keywords":["make simple app using Elasticsearch"],
+					"Categories":["Elasticsearch"],
+					"Tags":["Elasticsearch","NodeJS","Bootstrap","Express"],
+					"Status":"Published"
+				}
+			}
+		]
+	}
+}

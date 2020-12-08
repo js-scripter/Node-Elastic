@@ -1,6 +1,7 @@
 # Node-ElasticSearch
 Simple app using Node js with Elastic Search
 it uses Elastic search in Docker image.
+
 ##to start Docker container for elastic search
 - `sudo docker pull elasticsearch:7.9.3`
 ##to run elastic in docker

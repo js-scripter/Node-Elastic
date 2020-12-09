@@ -1,0 +1,39 @@
+{{#each this.hits.hits}} 
+{{_id}} {{Title}}
+{{/each}}
+
+{{#if this.hits.hits}}   
+    {{#each this.hits.hits}} 
+        <form method="POST" action="/editTitle">
+        <div class="form-group">
+            <label for="_id">Title</label>
+            <input type="text" class="form-control" placeholder="id" name="_id" value="{{_id}}">
+        </div>
+        <div class="form-group">
+            <label for="Title">Title</label>
+            <input type="text" class="form-control" placeholder="Title" name="Title" value="{{_source.Title}}">
+        </div>
+        <div class="form-group">
+            <label for="MetaDescription">Meta Description</label>
+            <input type="text" class="form-control" name="MetaDescription" placeholder="MetaDescription" value="{{_source.MetaDescription}}">
+        </div>
+        <div class="form-group">
+            <label for="MetaKeywords">Meta Keywords</label>
+            <input type="text" class="form-control" name="MetaKeywords" placeholder="MetaKeywords" value="{{_source.MetaKeywords}}">
+        </div>
+        <div class="form-group">
+            <label for="Categories">Categories</label>
+            <input type="text" class="form-control" name="Categories" placeholder="Categories" value="{{_source.Categories}}">
+        </div>
+        <div class="form-group">
+            <label for="Tags">Tags</label>
+            <input type="text" class="form-control" name="Tags" placeholder="Tags" value="{{_source.Tags}}">
+        </div>
+        <div class="form-group">
+            <label for="Status">Status</label>
+            <input type="text" class="form-control" name="Status" placeholder="Status" value="{{_source.Status}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    {{/each}}                       
+{{/if}}

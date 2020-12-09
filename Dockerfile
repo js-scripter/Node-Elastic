@@ -1,2 +1,10 @@
-FROM busybox
-CMD echo "Hello world! This is my first Docker image."
+FROM node:current-slim
+
+WORKDIR /usr/src/app
+COPY package.json .
+RUN npm install
+
+EXPOSE 9400
+CMD [ "npm", "start" ]
+
+COPY . .

@@ -12,6 +12,8 @@
   "dependencies": {
     "elasticsearch": "^16.7.2",
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.0"
+    "express-handlebars": "^5.2.0",
+    "request-promise-native": "^1.0.9",
+    "shortid": "^2.2.16"
   }
 }
